@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'IBM Plex Sans Thai Looped';
+    src: url('./fonts/IBMPlexSansThaiLooped-Regular.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Thai Looped';
+    src: url('./fonts/IBMPlexSansThaiLooped-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+p, li {
+    color: var(--color-white)
+}
+
+.slide p {
+    color: black
+}
+
+.shower {
+    font-family: "PT Sans", sans-serif;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 300;
+    --color-white: #fff;
+    --color-yellow: #fcee0a;
+    --color-black: #000; 
+    --color-red: #CC0200;
+    --color-green: #06c258; 
+}
+
+.shower.list {
+    background: var(--color-white);
+}
+
+.caption {
+    color: black;
+    text-shadow: none;
+}
+
+.content img {
+    /* border-radius: 50%;
+    height: 322px;
+    width: 333px;
+    clip-path: circle(50%);
+    object-fit: none; */
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about p {
+    color: var(--color-black);
+}
+
+.enabled-button {
+    color: var(--color-white);
+    background-color: var(--color-green);
+    border: none;
+    display: block;
+    border-radius: 40px;
+    height: 100px;
+    /* border: 3px solid darkgrey; */
+    font-size: 48px;
+    width: 400px;
+    cursor: pointer;
+}
+
+.disabled-button {
+    /* color: var(--color-white);
+    background-color: var(--color-green);
+    border: none; */
+    display: block;
+    border-radius: 40px;
+    color: gray;
+    height: 100px;
+    background: #d2d2d2;
+    border: 3px solid darkgrey;
+    font-size: 48px;
+    width: 400px;
+}
+
+.enabled-button:focus {
+   border: 8px solid blue;
+}
+
+.button-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.invalid-form {
+    width: 226px;
+    height: 380px;
+}
+
+.valid-form {
+    width: 300px;
+}
+
+.menu {
+    display: none;
+}
+
+
+.tooltip-section {
+    position: relative;
+}
+
+.button-container {
+    position: relative;
+    display: inline-block;
+  }
+
+.button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container .tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.not-accessible:hover + .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.not-accessible:focus + .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+#popup {
+    display: none;
+    padding: 0.5em;
+    background:white;
+    color: black;
+    border:solid black 2px;
+    width:10em;
+}
+
+.a-and-tooltip {
+    position: relative;
+}
+  
+#popup {
+    position: absolute;
+    left:0;
+    top:1em;
+    /* left:0;
+    top:50px; */
+} 
+
+/* .image {
+    width: 300px;
+    height: auto;
+}
+
+/* 
+[role="tooltip"] {
+    display: none;
+    padding: 0.5em;
+    background:white;
+    color: black;
+    border:solid black 2px;
+    width:10em;
+}
+
+.a-and-tooltip {
+  position: relative;
+}
+
+[role="tooltip"] {
+    position: absolute;
+    left:0;
+    top:1em;
+} */

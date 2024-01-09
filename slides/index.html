@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Shower Presentation Engine</h1>
+        <p>Yours Truly, Famous Inc.</p>
+    </header>
+
+    <section class="slide">
+        <h2 class="title">Under the Radar: Non-Obvious Accessibility Pitfalls You Need to Know</h2>
+        <p class="author-title">Minich Marianna</p>
+        <!-- Create your first slide -->
+    </section>
+    <section class="slide">
+        <h2 class="header">Minich Marianna</h2>
+        <div class="content top">
+            <figure>
+                <img src="images/author.jpg"  width="240" alt="Фото Марианны">
+            </figure>
+
+            <div class="about">
+                <p> Software engineer в EPAM</p>
+                <p> Accessibility driven developer</p>
+                <p>Vilnius, Lithuania</p>
+                <p class="social">
+                    <!-- <img class="social-icon" src="https://img.icons8.com/color/50/000000/twitter--v1.png"/>  -->
+                    <span>X:</span> <a class="contact" href="https://twitter.com/MARY_CHERRY_PIE" target="_blank">@MARY_CHERRY_PIE</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="header">Agenda</h2>
+    </section>
+    <section class="slide">
+        <h2 class="header">Problems</h2>
+        <p>small story about one issue</p>
+    </section>
+    <section class="slide">
+        <h2 class="header">Disabled button</h2>
+        <div class="button-section">
+            <button class="enabled-button" type="button">Default</button>
+            <span>paste code example</span>
+            <button class="disabled-button" type="button" disabled>Offline</button>
+            <button class="enabled-button" type="button">Online</button>
+        </div>
+    </section>
+    <section class="slide">
+        <p>when a screen reader doesn't ever reach the button, then he will never indicate that there's a button.</p>
+    </section>
+    <section class="slide">
+        <h2 class="header">Disabled button</h2>
+        <div class="button-section">
+            <span>paste code example</span>
+            <button class="disabled-button" type="button" disabled>Offline</button>
+            <button onclick="console.log('CLICK')"class="disabled-button" type="button" aria-disabled="true">Offline</button>
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="header">Disabled button</h2>
+        <div class="button-section">
+            <img src="./images/twitter.jpg" alt="x.com form with disabled button in the bottom" class="invalid-form">
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="header">Disabled button</h2>
+        <div class="button-section">
+            <img src="./images/facebook.jpg" alt="facebook login form  with enabled button in the bottom" class="valid-form">
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="header">Hover-Only Interactions</h2>
+        <p>not accessible example</p>
+        <div class="button-container">
+            <button class="button not-accessible">Hover me</button>
+            <div class="tooltip">This is the tooltip text.</div>
+          </div>
+    </section>
+    <section class="slide">
+        <h2 class="header">Hover-Only Interactions</h2>
+        <p> not accessible example</p>
+        <div class="button-container">
+            <button class="button not-accessible" aria-describedby="tooltip">Hover me</button>
+            <div role="tooltip" id="tooltip" class="tooltip">This is the tooltip text.</div>
+        </div>
+    </section>
+    <section class="slide">
+        <h2 class="header">Hover-Only Interactions</h2>
+        <p> tooltip pattern</p>
+        <!-- <p>This is the <a class="a-and-tooltip" id="parent" href="index.html">trigger
+            <span id="popup" role="tooltip">And this additional text 
+            gives additional context on the trigger term</span></a>.
+            Text and popup are <strong>in one link (a)</strong> element.</p> -->
+            
+        <p>This is the
+            <a class="a-and-tooltip" id="parent" aria-describedby="tooltip" href="index.html">trigger
+                <span id="popup" role="tooltip">And this additional text gives additional context on the trigger term</span>
+            </a>.
+            Text and popup are <strong>in one link (a)</strong> element.
+        </p>
+    </section>
+    <section class="slide">
+        <h2 class="header">Hover-Only Interactions</h2>
+        <p> Title pattern</p>
+        <img class="image" src="./images/porto.JPG" title="some stuff that could be useful" />
+    </section>
+    <section class="slide">
+        <h2 class="header">Interactive Images</h2>
+    </section>
+
+
+    <footer class="badge">
+        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="node_modules/@shower/core/dist/shower.js"></script>
+    <!-- Copyright © 2023 Yours Truly, Famous Inc. -->
+    <script src="./index.js"></script>
+</body>
+</html>
